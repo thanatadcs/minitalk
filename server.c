@@ -6,7 +6,7 @@
 /*   By: tanukool <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/27 07:52:35 by tanukool          #+#    #+#             */
-/*   Updated: 2022/08/27 13:41:36 by tanukool         ###   ########.fr       */
+/*   Updated: 2022/08/27 14:17:26 by tanukool         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ void	print_bin(int n)
 		printf("%d", (n >> i--) & 1);
 	printf("\n");
 }
+
 void	handler(int sig)
 {
 	static char				bit_count;
