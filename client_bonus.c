@@ -6,7 +6,7 @@
 /*   By: tanukool <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/27 07:19:18 by tanukool          #+#    #+#             */
-/*   Updated: 2022/08/29 17:22:39 by tanukool         ###   ########.fr       */
+/*   Updated: 2022/08/29 18:03:24 by tanukool         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ void	handler(int sig, siginfo_t *info, void *context)
 
 int	main(int ac, char *av[])
 {
-	pid_t	pid;
+	pid_t				pid;
 	struct sigaction	sa;
 
 	if (ac == 3)
