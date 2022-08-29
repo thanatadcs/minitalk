@@ -21,12 +21,22 @@ S_NAME = server
 C_SRC = client.c
 C_NAME = client 
 
+BS_SRC = server_bonus.c
+BS_NAME = server
+
+BC_SRC = client_bonus.c
+BC_NAME = client
+
 LIBFT = libft.a
 LIBFT_DIR = libft
 
 all: $(NAME)
 
 $(NAME): server client
+
+bonus: $(LIBFT) $(BS_SRC) $(BC_SRC)
+	$(CC) $(CFLAGS) $(BC_SRC) -o $(BC_NAME)	
+	$(CC) $(CFLAGS) $(BS_SRC) -o $(BS_NAME)	
 
 $(S_NAME): $(S_SRC) $(LIBFT)
 	$(CC) $(CFLAGS) $< -o $@
