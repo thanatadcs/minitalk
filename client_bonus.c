@@ -6,13 +6,11 @@
 /*   By: tanukool <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/27 07:19:18 by tanukool          #+#    #+#             */
-/*   Updated: 2022/08/29 17:16:20 by tanukool         ###   ########.fr       */
+/*   Updated: 2022/08/29 17:22:39 by tanukool         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <signal.h>
-#include <stdlib.h>
-#include <unistd.h>
 #include "libft.h"
 
 int	simple_atoi(const char *str)
