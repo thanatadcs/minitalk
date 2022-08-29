@@ -6,7 +6,7 @@
 /*   By: tanukool <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/27 07:19:18 by tanukool          #+#    #+#             */
-/*   Updated: 2022/08/27 13:52:00 by tanukool         ###   ########.fr       */
+/*   Updated: 2022/08/29 16:47:47 by tanukool         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void	send_byte(pid_t pid, char c)
 			exit(EXIT_FAILURE);
 		}
 		bit_count--;
-		usleep(50);
+		usleep(250);
 	}
 }
 

@@ -6,24 +6,13 @@
 /*   By: tanukool <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/27 07:52:35 by tanukool          #+#    #+#             */
-/*   Updated: 2022/08/27 14:17:26 by tanukool         ###   ########.fr       */
+/*   Updated: 2022/08/29 16:46:48 by tanukool         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <signal.h>
 #include <unistd.h>
 #include "libft.h"
-#include <stdio.h>
-
-void	print_bin(int n)
-{
-	int	i;
-
-	i = 7;
-	while (i >= 0)
-		printf("%d", (n >> i--) & 1);
-	printf("\n");
-}
 
 void	handler(int sig)
 {

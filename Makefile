@@ -38,7 +38,7 @@ $(LIBFT):
 	make -C $(LIBFT_DIR)
 
 clean:
-	make clean -C $(LIBFT_DIR)
+	make fclean -C $(LIBFT_DIR)
 
 fclean: clean
 	rm -f $(C_NAME) $(S_NAME)
