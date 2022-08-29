@@ -27,7 +27,7 @@ BS_NAME = server
 BC_SRC = client_bonus.c
 BC_NAME = client
 
-LIBFT = libft.a
+LIBFT = libft/libft.a
 LIBFT_DIR = libft
 
 all: $(NAME)
