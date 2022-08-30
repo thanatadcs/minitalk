@@ -22,10 +22,10 @@ C_SRC = client.c
 C_NAME = client 
 
 BS_SRC = server_bonus.c
-BS_NAME = server
+BS_NAME = server_bonus
 
 BC_SRC = client_bonus.c
-BC_NAME = client
+BC_NAME = client_bonus
 
 LIBFT = libft/libft.a
 LIBFT_DIR = libft
@@ -34,15 +34,21 @@ all: $(NAME)
 
 $(NAME): server client
 
-bonus: $(LIBFT) $(BS_SRC) $(BC_SRC)
-	$(CC) $(CFLAGS) $(BC_SRC) -o $(BC_NAME)	
-	$(CC) $(CFLAGS) $(BS_SRC) -o $(BS_NAME)	
 
 $(S_NAME): $(S_SRC) $(LIBFT)
 	$(CC) $(CFLAGS) $< -o $@
 
 $(C_NAME): $(C_SRC) $(LIBFT)
 	$(CC) $(CFLAGS) $< -o $@
+
+bonus: $(BS_NAME) $(BC_NAME)
+
+$(BS_NAME): $(BS_SRC) $(LIBFT)
+	$(CC) $(CFLAGS) $< -o $@
+
+$(BC_NAME): $(BC_SRC) $(LIBFT)
+	$(CC) $(CFLAGS) $< -o $@
+
 
 $(LIBFT):
 	make -C $(LIBFT_DIR)
@@ -51,8 +57,8 @@ clean:
 	make fclean -C $(LIBFT_DIR)
 
 fclean: clean
-	rm -f $(C_NAME) $(S_NAME)
+	rm -f $(C_NAME) $(S_NAME) $(BC_NAME) $(BS_NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
